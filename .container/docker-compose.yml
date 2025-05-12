@@ -1,0 +1,14 @@
+services:
+  kicad_service:
+    build:
+      context: .
+      dockerfile: Dockerfile # The path to our Dockerfile
+    network_mode: host
+    environment:
+      - DISPLAY=${DISPLAY}
+    command: kicad
+    tty: true
+    privileged: true
+    volumes:
+      - ../:/workspace:cached
+      - /tmp/.X11-unix:/tmp/.X11-unix
