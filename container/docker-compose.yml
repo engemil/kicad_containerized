@@ -12,7 +12,8 @@ services:
     volumes:
       - ../:/workspace:cached # Workspace folder
       - /tmp/.X11-unix:/tmp/.X11-unix # Connecting host and container GUI
-      - ../data/shared-kicad/:/usr/share/kicad # KiCad Environment Variables Path(s)
-      - ../data/local-shared-kicad/:/root/.local/share/kicad/ # KiCad Environment Variables Path(s)
-      - ../data/config-kicad/:/root/.config/kicad/ # KiCad Path to Config
+      # WORK-IN-PROGRESS
+      #- ../data/shared-kicad/:/usr/share/kicad # KiCad Environment Variables Path(s)
+      #- ../data/local-shared-kicad/:/root/.local/share/kicad/ # KiCad Environment Variables Path(s)
+      #- ../data/config-kicad/:/root/.config/kicad/ # KiCad Path to Config
 
