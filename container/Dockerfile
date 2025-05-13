@@ -13,6 +13,9 @@ RUN apt-get update && apt-get upgrade -y
 # git - For version control. https://packages.ubuntu.com/noble/git
 RUN apt-get install git -y
 
+# python3 - Needed for KiCad. NB! Comes with Ubuntu
+#RUN apt install python3 -y
+
 # kicad - KiCad
 RUN apt install kicad -y
 

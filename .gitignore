@@ -1,5 +1,5 @@
-# For PCBs designed using KiCad: https://www.kicad.org/
-# Format documentation: https://kicad.org/help/file-formats/
+
+project/*
 
 # Temporary files
 *.000

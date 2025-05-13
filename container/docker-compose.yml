@@ -1,8 +1,9 @@
 services:
-  kicad_service:
+  kicad:
     build:
       context: .
       dockerfile: Dockerfile # The path to our Dockerfile
+    container_name: kicad
     network_mode: host
     environment:
       - DISPLAY=${DISPLAY} # Connecting host and container GUI
@@ -13,7 +14,19 @@ services:
       - ../:/workspace:cached # Workspace folder
       - /tmp/.X11-unix:/tmp/.X11-unix # Connecting host and container GUI
       # WORK-IN-PROGRESS
-      #- ../data/shared-kicad/:/usr/share/kicad # KiCad Environment Variables Path(s)
-      #- ../data/local-shared-kicad/:/root/.local/share/kicad/ # KiCad Environment Variables Path(s)
-      #- ../data/config-kicad/:/root/.config/kicad/ # KiCad Path to Config
+      #- ../data/shared-kicad/:/usr/share/kicad # KiCad Environment Variables Path(s) # This throws errors
+      - ../data/3dmodels-kicad/:/usr/share/kicad/3dmodels/ # Env. Var.: KICAD9_3DMODEL_DIR
+      - ../data/blocks-kicad/:/usr/share/blocks # Env. Var.: KICAD9_DESIGN_BLOCK_DIR
+      - ../data/footprints-kicad/:/usr/share/kicad/footprints # Env. Var.: KICAD9_FOOTPRINT_DIR
+      - ../data/symbols-kicad/:/usr/share/kicad/symbols # Env. Var.: KICAD9_SYMBOL_DIR
+      - ../data/template-kicad/:/usr/share/kicad/template # Env. Var.: KICAD9_TEMPLATE_DIR
+      # WORK-IN-PROGRESS
+      #- ../data/3rdparty-kicad/:/root/.local/share/kicad/9.0/3rdparty # Env. Var.: KICAD9_3RD_PARTY
+      #- ../data/user-template-kicad/:/root/.local/share/kicad/9.0/template # Env. Var.: KICAD9_USER_TEMPLATE_DIR
+      - ../data/local-shared-kicad/:/root/.local/share/kicad/ # KiCad Environment Variables Path(s)
+      # WORK-IN-PROGRESS
+      - ../data/config-kicad/:/root/.config/kicad/ # KiCad Path to Config
+
+      
+      
 
