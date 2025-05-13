@@ -28,7 +28,9 @@
     "zone_fill_warning": false
   },
   "environment": {
-    "vars": null
+    "vars": {
+      "TEST_PATH": "/root/test/"
+    }
   },
   "git": {
     "authorEmail": "",
