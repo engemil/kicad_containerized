@@ -13,11 +13,13 @@ Prerequisite(s):
 Setup
 - Open terminal and pull this repo: `git pull <repo-link>`
 - Change current directory to the `.container`-folder in the repo: `cd kicad_containerized/.container`
+- Run setup script: `sudo chmod +x ./setup.sh` and `./setup.sh`
 - Spin up the container: `docker compose up -d`
     - Alterantively: `sudo chmod +x ./start.sh` and `./start.sh`
 - Make a new project e.g. in the `project`-folder.
 - To spin down the container: `docker compose down`
     - Alterantively: `sudo chmod +x ./stop.sh` and `./stop.sh`
+
 
 ## Run on Windows 11 Host Computer
 
