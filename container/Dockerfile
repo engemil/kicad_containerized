@@ -28,9 +28,6 @@ RUN mkdir /workspace
 # NB! Test first to see if it works. Might be conflicting with how the folder is created with devcontainer.json.
 # Making changes in that folder useless from the Dockerfile.
 
-# Get ChibiOS Repository from Github
-#RUN git clone https://github.com/ChibiOS/ChibiOS /workspace/ChibiOS
-
 WORKDIR /workspace
 # Command to run KiCad
 #CMD ["kicad"]
